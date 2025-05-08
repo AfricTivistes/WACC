@@ -59,7 +59,7 @@ export default function ProjectsSection({ dict }: ProjectsSectionProps) {
       title: "Charter Project Africa",
       description:
         "Initiative pour la gouvernance démocratique promouvant la Charte africaine de la démocratie, des élections et de la gouvernance.",
-      image: "/placeholder.svg?key=pvzha",
+      image: "/images/charter-project-africa.png",
       url: "https://charter.africa",
       axis: "Consolidation démocratique",
     },
