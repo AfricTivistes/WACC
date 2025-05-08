@@ -1,0 +1,113 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "events": "Événements",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Transformer la gouvernance par la technologie",
+    "description": "AfricTivistes est un réseau panafricain qui promeut une Afrique démocratique, inclusive et souveraine à l'ère du numérique, à travers des solutions technologiques innovantes.",
+    "cta": {
+      "projects": "Découvrir nos projets",
+      "conference": "West Africa CivicTech Conference"
+    }
+  },
+  "about": {
+    "title": "À Propos d'AfricTivistes",
+    "description": "Fondée en 2015, AfricTivistes est un réseau panafricain basé à Dakar qui œuvre pour une Afrique démocratique, inclusive et souveraine à l'ère du numérique.",
+    "content": {
+      "paragraph1": "À la croisée de l'innovation civique et de l'engagement citoyen, AfricTivistes s'impose comme un acteur clé de la transformation démocratique sur le continent.",
+      "paragraph2": "Dans un contexte continental marqué par des défis croissants en matière de gouvernance, l'organisation déploie des projets et initiatives structurants qui traduisent la maturité de son approche et la pertinence de sa vision. Elle promeut une démocratie participative, portée par des citoyens connectés, informés et pleinement engagés dans les processus de changement.",
+      "paragraph3": "À travers ses actions, AfricTivistes défend une citoyenneté augmentée, où les technologies numériques deviennent des outils de transparence, de responsabilité et de transformation sociale."
+    },
+    "cta": "En savoir plus",
+    "axes": {
+      "title": "Nos axes stratégiques",
+      "democratic": {
+        "title": "Consolidation démocratique",
+        "description": "Consolidation des acquis démocratiques, de la transparence électorale et de la bonne gouvernance"
+      },
+      "participation": {
+        "title": "Participation citoyenne",
+        "description": "Promotion de la participation citoyenne et de l'innovation civique"
+      },
+      "rights": {
+        "title": "Droits numériques",
+        "description": "Défense des droits numériques et de la souveraineté technologique"
+      },
+      "capacity": {
+        "title": "Renforcement des capacités",
+        "description": "Renforcement des capacités des acteurs de la société civile et des professionnels des médias"
+      }
+    },
+    "quote": "Résolument tournée vers l'avenir, AfricTivistes construit des réponses innovantes aux enjeux démocratiques contemporains, en mobilisant les forces vives du continent pour bâtir une Afrique plus juste, plus libre et plus numérique.",
+    "stats": {
+      "participants": {
+        "value": "550+",
+        "label": "Participants aux sommets"
+      },
+      "members": {
+        "value": "400+",
+        "label": "Membres dans 45 pays"
+      },
+      "learners": {
+        "value": "2000+",
+        "label": "Apprenants MOOC"
+      },
+      "communities": {
+        "value": "20",
+        "label": "Communautés propulsées"
+      }
+    }
+  },
+  "projects": {
+    "title": "Nos Projets",
+    "description": "Découvrez nos initiatives innovantes qui s'alignent avec nos axes stratégiques pour renforcer la démocratie, la transparence et l'engagement citoyen en Afrique à l'ère du numérique.",
+    "cta": "Voir tous les projets",
+    "visit": "Visiter le site",
+    "more": "En savoir plus"
+  },
+  "impact": {
+    "title": "Notre Impact",
+    "description": "Depuis 2015, AfricTivistes transforme la gouvernance en Afrique à travers des initiatives technologiques innovantes qui soutiennent une Afrique démocratique, inclusive et souveraine."
+  },
+  "conference": {
+    "title": "West Africa CivicTech Conference 2025",
+    "description": "Rejoignez-nous à Lagos, Nigeria, du 19 au 21 mai 2025 pour la plus grande conférence sur l'innovation civique et la technologie démocratique en Afrique de l'Ouest.",
+    "date": "Date",
+    "location": "Lieu",
+    "register": "S'inscrire à la conférence"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "description": "Vous avez des questions ou souhaitez collaborer avec nous ? N'hésitez pas à nous contacter.",
+    "form": {
+      "name": "Nom complet",
+      "email": "Email",
+      "subject": "Sujet",
+      "message": "Message",
+      "send": "Envoyer le message"
+    },
+    "address": "Adresse",
+    "phone": "Téléphone",
+    "join": {
+      "title": "Rejoignez notre réseau",
+      "description": "Devenez membre d'AfricTivistes et participez à la transformation de la gouvernance en Afrique par la technologie.",
+      "cta": "Devenir membre"
+    }
+  },
+  "footer": {
+    "description": "AfricTivistes est un réseau panafricain qui œuvre pour une Afrique démocratique, inclusive et souveraine à l'ère du numérique.",
+    "axes": "Axes Stratégiques",
+    "rights": "Tous droits réservés.",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation"
+  },
+  "language": {
+    "fr": "FR",
+    "en": "EN"
+  },
+  "chat": "Chat Signal"
+}

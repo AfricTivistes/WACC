@@ -18,12 +18,14 @@ export default function ConferenceSection() {
     {
       icon: <Calendar className="h-6 w-6 text-primary" />,
       title: "Ateliers",
-      description: "Assistez à des ateliers sur les dernières tendances en matière de civic tech.",
+      description:
+        "Assistez à des ateliers sur les dernières tendances en matière d'innovation civique et de droits numériques.",
     },
     {
       icon: <MapPin className="h-6 w-6 text-primary" />,
       title: "Exposition",
-      description: "Découvrez les projets innovants d'Africtivistes et de ses partenaires.",
+      description:
+        "Découvrez les projets innovants d'AfricTivistes et de ses partenaires pour une Afrique plus démocratique.",
     },
   ]
 
@@ -34,8 +36,8 @@ export default function ConferenceSection() {
         <AnimatedElement animation="fade-up" className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">West Africa CivicTech Conference 2025</h2>
           <p className="text-gray-600 dark:text-gray-400">
-            Rejoignez-nous à Lagos, Nigeria, du 19 au 21 mai 2025 pour la plus grande conférence sur la civic tech en
-            Afrique de l'Ouest.
+            Rejoignez-nous à Lagos, Nigeria, du 19 au 21 mai 2025 pour la plus grande conférence sur l'innovation
+            civique et la technologie démocratique en Afrique de l'Ouest.
           </p>
         </AnimatedElement>
 

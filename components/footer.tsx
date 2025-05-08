@@ -6,8 +6,44 @@ import { AnimatedElement } from "@/components/ui/animated-element"
 import { LegalDialog } from "@/components/ui/legal-dialog"
 import PrivacyPolicy from "@/components/legal/privacy-policy"
 import TermsOfUse from "@/components/legal/terms-of-use"
+import type { Locale } from "@/lib/types"
 
-export default function Footer() {
+interface FooterProps {
+  dict: {
+    navigation: {
+      about: string
+      projects: string
+      events: string
+      contact: string
+    }
+    footer: {
+      description: string
+      axes: string
+      rights: string
+      privacy: string
+      terms: string
+    }
+    about: {
+      axes: {
+        democratic: {
+          title: string
+        }
+        participation: {
+          title: string
+        }
+        rights: {
+          title: string
+        }
+        capacity: {
+          title: string
+        }
+      }
+    }
+  }
+  lang: Locale
+}
+
+export default function Footer({ dict, lang }: FooterProps) {
   return (
     <footer className="bg-gray-900 text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-pattern-dots opacity-5"></div>
@@ -17,17 +53,14 @@ export default function Footer() {
             <div className="relative group">
               <Image
                 src={`/images/logo-africtivistes-alt.svg?v=${new Date().getTime()}`}
-                alt="Africtivistes Logo"
+                alt="AfricTivistes Logo"
                 width={180}
                 height={40}
                 className="h-10 w-auto transition-transform duration-300 group-hover:scale-110"
               />
             </div>
-            <span className="sr-only">Africtivistes Logo</span>
-            <p className="text-gray-400 text-sm">
-              Africtivistes est une organisation panafricaine qui promeut la démocratie via la technologie civique en
-              Afrique.
-            </p>
+            <span className="sr-only">AfricTivistes Logo</span>
+            <p className="text-gray-400 text-sm">{dict.footer.description}</p>
             <div className="flex space-x-3">
               <Link href="https://twitter.com/africtivistes" target="_blank" rel="noopener noreferrer">
                 <Button
@@ -83,33 +116,33 @@ export default function Footer() {
           </AnimatedElement>
 
           <AnimatedElement animation="fade-up" delay={200}>
-            <h3 className="text-lg font-bold mb-4">Liens Rapides</h3>
+            <h3 className="text-lg font-bold mb-4">{dict.footer.axes}</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="#about" className="text-gray-400 hover:text-white transition-colors hover-underline">
-                  À propos
+                  {dict.about.axes.democratic.title}
                 </Link>
               </li>
               <li>
-                <Link href="#projects" className="text-gray-400 hover:text-white transition-colors hover-underline">
-                  Projets
+                <Link href="#about" className="text-gray-400 hover:text-white transition-colors hover-underline">
+                  {dict.about.axes.participation.title}
                 </Link>
               </li>
               <li>
-                <Link href="#events" className="text-gray-400 hover:text-white transition-colors hover-underline">
-                  Événements
+                <Link href="#about" className="text-gray-400 hover:text-white transition-colors hover-underline">
+                  {dict.about.axes.rights.title}
                 </Link>
               </li>
               <li>
-                <Link href="#contact" className="text-gray-400 hover:text-white transition-colors hover-underline">
-                  Contact
+                <Link href="#about" className="text-gray-400 hover:text-white transition-colors hover-underline">
+                  {dict.about.axes.capacity.title}
                 </Link>
               </li>
             </ul>
           </AnimatedElement>
 
           <AnimatedElement animation="fade-up" delay={400}>
-            <h3 className="text-lg font-bold mb-4">Contact</h3>
+            <h3 className="text-lg font-bold mb-4">{dict.navigation.contact}</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mr-2 text-primary shrink-0 mt-0.5" />
@@ -139,24 +172,24 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">
-            &copy; {new Date().getFullYear()} Africtivistes. Tous droits réservés.
+            &copy; {new Date().getFullYear()} AfricTivistes. {dict.footer.rights}
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <LegalDialog
-              title="Politique de confidentialité"
+              title={dict.footer.privacy}
               trigger={
                 <span className="text-gray-500 hover:text-white text-sm transition-colors hover-underline">
-                  Politique de confidentialité
+                  {dict.footer.privacy}
                 </span>
               }
             >
               <PrivacyPolicy />
             </LegalDialog>
             <LegalDialog
-              title="Conditions d'utilisation"
+              title={dict.footer.terms}
               trigger={
                 <span className="text-gray-500 hover:text-white text-sm transition-colors hover-underline">
-                  Conditions d&apos;utilisation
+                  {dict.footer.terms}
                 </span>
               }
             >

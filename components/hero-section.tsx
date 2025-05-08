@@ -3,7 +3,21 @@ import { Button } from "@/components/ui/button"
 import { ChevronRight } from "lucide-react"
 import { AnimatedElement } from "@/components/ui/animated-element"
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  dict: {
+    hero: {
+      title: string
+      description: string
+      cta: {
+        projects: string
+        conference: string
+      }
+    }
+  }
+  lang: "fr" | "en"
+}
+
+export default function HeroSection({ dict, lang }: HeroSectionProps) {
   return (
     <section id="home" className="relative pt-20 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 z-0" />
@@ -12,19 +26,28 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <AnimatedElement animation="fade-up" duration={800} className="space-y-6 text-center lg:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Transformer la gouvernance par la <span className="gradient-text">technologie</span>
+              {lang === "fr" ? (
+                <>
+                  {dict.hero.title.split("technologie")[0]}
+                  <span className="gradient-text">technologie</span>
+                </>
+              ) : (
+                <>
+                  {dict.hero.title.split("technology")[0]}
+                  <span className="gradient-text">technology</span>
+                </>
+              )}
             </h1>
             <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto lg:mx-0">
-              Africtivistes est une organisation panafricaine qui promeut la démocratie, la transparence et
-              l&apos;engagement citoyen à travers des solutions technologiques innovantes.
+              {dict.hero.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button size="lg" className="text-base btn-hover-effect">
-                Découvrir nos projets
+                {dict.hero.cta.projects}
                 <ChevronRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Button>
               <Button size="lg" variant="outline" className="text-base transition-all duration-300 hover:bg-primary/10">
-                West Africa CivicTech Conference
+                {dict.hero.cta.conference}
               </Button>
             </div>
           </AnimatedElement>
@@ -43,7 +66,7 @@ export default function HeroSection() {
                 <div className="bg-red-600 text-white px-4 py-2 rounded-md inline-block mb-2 max-w-max glass">
                   19-21 Mai 2025
                 </div>
-                <h3 className="text-white text-xl md:text-2xl font-bold">West Africa CivicTech Conference</h3>
+                <h3 className="text-white text-xl md:text-2xl font-bold">{dict.hero.cta.conference}</h3>
                 <p className="text-white/80 mt-1">Lagos, Nigeria</p>
               </div>
             </div>

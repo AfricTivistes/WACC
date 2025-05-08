@@ -1,7 +1,16 @@
 import { CheckCircle } from "lucide-react"
 import { AnimatedElement } from "@/components/ui/animated-element"
 
-export default function ImpactSection() {
+interface ImpactSectionProps {
+  dict: {
+    impact: {
+      title: string
+      description: string
+    }
+  }
+}
+
+export default function ImpactSection({ dict }: ImpactSectionProps) {
   const impacts = [
     {
       title: "Éducation Civique",
@@ -13,8 +22,9 @@ export default function ImpactSection() {
         "Soutien à 10 processus électoraux à travers l'Afrique, contribuant à des élections plus transparentes.",
     },
     {
-      title: "Autonomisation des Femmes",
-      description: "Formation de plus de 500 femmes en cybersécurité pour lutter contre les violences en ligne.",
+      title: "Autonomisation Numérique",
+      description:
+        "Formation de plus de 500 femmes en cybersécurité pour défendre leurs droits numériques et lutter contre les violences en ligne.",
     },
     {
       title: "Engagement Citoyen",
@@ -22,12 +32,13 @@ export default function ImpactSection() {
         "Développement de plateformes permettant aux citoyens de participer activement aux processus démocratiques.",
     },
     {
-      title: "Innovation Technologique",
+      title: "Innovation Civique",
       description: "Création d'outils numériques adaptés aux défis spécifiques de la gouvernance en Afrique.",
     },
     {
       title: "Réseau Panafricain",
-      description: "Construction d'un réseau de plus de 400 activistes et innovateurs dans 45 pays africains.",
+      description:
+        "Construction d'un réseau de plus de 400 activistes et innovateurs dans 45 pays africains depuis 2015.",
     },
   ]
 
@@ -36,11 +47,8 @@ export default function ImpactSection() {
       <div className="absolute inset-0 bg-pattern-dots opacity-5"></div>
       <div className="container relative z-10">
         <AnimatedElement animation="fade-up" className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Notre Impact</h2>
-          <p className="text-white/80">
-            Depuis 2015, Africtivistes transforme la gouvernance en Afrique à travers des initiatives technologiques
-            innovantes.
-          </p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{dict.impact.title}</h2>
+          <p className="text-white/80">{dict.impact.description}</p>
         </AnimatedElement>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
