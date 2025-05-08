@@ -80,6 +80,11 @@
     "location": "Lieu",
     "register": "S'inscrire à la conférence"
   },
+  "partnership": {
+    "title": "Annonce de Partenariat",
+    "description": "Nous sommes ravis d'annoncer notre partenariat officiel avec CivicHive dans le cadre de la Conférence Civic Tech de l'Afrique de l'Ouest 2025 en tant que Partenaire francophone pour le plaidoyer ! La conférence a pour objectif de briser les barrières linguistiques et numériques, et renforcer l'innovation #CivicTech à travers toute l'Afrique de l'Ouest, afin de promouvoir la démocratie et construire des sociétés plus justes et inclusives.",
+    "cta": "S'inscrire à la conférence"
+  },
   "contact": {
     "title": "Contactez-nous",
     "description": "Vous avez des questions ou souhaitez collaborer avec nous ? N'hésitez pas à nous contacter.",

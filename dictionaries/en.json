@@ -80,6 +80,11 @@
     "location": "Location",
     "register": "Register for the conference"
   },
+  "partnership": {
+    "title": "Partnership Announcement",
+    "description": "We are delighted to announce our official partnership with CivicHive for the West Africa 2025 Civic Tech Conference as a Francophone Advocacy Partner! The conference aims to break down language and digital barriers, and strengthen #CivicTech innovation across West Africa, in order to promote democracy and build more just and inclusive societies.",
+    "cta": "Register for the conference"
+  },
   "contact": {
     "title": "Contact Us",
     "description": "Do you have questions or want to collaborate with us? Don't hesitate to contact us.",

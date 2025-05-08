@@ -26,7 +26,7 @@ export default async function Home({
       <VideoSection dict={dict} />
       <ProjectsSection dict={dict} />
       <ImpactSection dict={dict} />
-      <ConferenceSection dict={dict} />
+      <ConferenceSection dict={dict} lang={lang} />
       <ContactSection dict={dict} />
       <Footer dict={dict} lang={lang} />
     </main>
