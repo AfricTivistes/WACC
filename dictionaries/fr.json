@@ -7,11 +7,11 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Transformer la gouvernance par la technologie",
+    "title": "Les CivicTech au service des démocraties africaines",
     "description": "AfricTivistes est un réseau panafricain qui promeut une Afrique démocratique, inclusive et souveraine à l'ère du numérique, à travers des solutions technologiques innovantes.",
     "cta": {
       "projects": "Découvrir nos projets",
-      "conference": "West Africa CivicTech Conference"
+      "conference": "Conférence CivicTech d'Afrique de l'Ouest"
     }
   },
   "about": {
@@ -38,8 +38,8 @@
         "description": "Défense des droits numériques et de la souveraineté technologique"
       },
       "capacity": {
-        "title": "Renforcement des capacités",
-        "description": "Renforcement des capacités des acteurs de la société civile et des professionnels des médias"
+        "title": "Appui techniques",
+        "description": "Renforcement des acteurs de la société civile et des professionnels des médias"
       }
     },
     "quote": "Résolument tournée vers l'avenir, AfricTivistes construit des réponses innovantes aux enjeux démocratiques contemporains, en mobilisant les forces vives du continent pour bâtir une Afrique plus juste, plus libre et plus numérique.",
@@ -62,23 +62,111 @@
       }
     }
   },
+  "video": {
+    "title": "Découvrez Nos Initiatives",
+    "description": "Plongez dans l'univers d'AfricTivistes à travers cette compilation vidéo de nos différentes initiatives et activités à travers l'Afrique.",
+    "tagline": "Ensemble, transformons la gouvernance en Afrique par la technologie",
+    "projects": "Cette vidéo présente nos projets phares : MOOC Démocratie, Soobu.tech, Farafina.tech, Citizen Lab, Charter Project Africa et Taxaw Temm."
+  },
   "projects": {
     "title": "Nos Projets",
     "description": "Découvrez nos initiatives innovantes qui s'alignent avec nos axes stratégiques pour renforcer la démocratie, la transparence et l'engagement citoyen en Afrique à l'ère du numérique.",
     "cta": "Voir tous les projets",
     "visit": "Visiter le site",
-    "more": "En savoir plus"
+    "more": "En savoir plus",
+    "items": [
+      {
+        "id": "mooc",
+        "title": "MOOC Démocratie",
+        "description": "Cours en ligne sur la démocratie, les élections et la gouvernance pour renforcer les capacités des citoyens et activistes africains.",
+        "axis": "Renforcement des capacités"
+      },
+      {
+        "id": "soobu",
+        "title": "Soobu.tech",
+        "description": "Plateforme pour la gouvernance ouverte et la transparence, permettant de cartographier les initiatives citoyennes liées aux élections.",
+        "axis": "Consolidation démocratique"
+      },
+      {
+        "id": "farafina",
+        "title": "Farafina.tech",
+        "description": "Hub d'innovation numérique pour l'engagement civique, offrant des données électorales et démocratiques à travers l'Afrique.",
+        "axis": "Participation citoyenne"
+      },
+      {
+        "id": "citizenlab",
+        "title": "Citizen Lab",
+        "description": "Formation et outils pour la société civile, incubant des solutions civic tech initiées par les citoyens pour une participation active.",
+        "axis": "Participation citoyenne"
+      },
+      {
+        "id": "charter",
+        "title": "Charter Project Africa",
+        "description": "Initiative pour la gouvernance démocratique promouvant la Charte africaine de la démocratie, des élections et de la gouvernance.",
+        "axis": "Consolidation démocratique"
+      },
+      {
+        "id": "taxawtemm",
+        "title": "Taxaw Temm",
+        "description": "Programme de formation en cybersécurité pour les femmes, visant à défendre les droits numériques et combattre les violences en ligne.",
+        "axis": "Droits numériques"
+      }
+    ]
   },
   "impact": {
     "title": "Notre Impact",
-    "description": "Depuis 2015, AfricTivistes transforme la gouvernance en Afrique à travers des initiatives technologiques innovantes qui soutiennent une Afrique démocratique, inclusive et souveraine."
+    "description": "Depuis 2015, AfricTivistes transforme la gouvernance en Afrique à travers des initiatives technologiques innovantes qui soutiennent une Afrique démocratique, inclusive et souveraine.",
+    "items": [
+      {
+        "title": "Éducation Civique",
+        "description": "Plus de 2000 apprenants formés via notre MOOC sur la démocratie, les élections et la gouvernance."
+      },
+      {
+        "title": "Transparence Électorale",
+        "description": "Soutien à 10 processus électoraux à travers l'Afrique, contribuant à des élections plus transparentes."
+      },
+      {
+        "title": "Autonomisation Numérique",
+        "description": "Formation de plus de 500 femmes en cybersécurité pour défendre leurs droits numériques et lutter contre les violences en ligne."
+      },
+      {
+        "title": "Engagement Citoyen",
+        "description": "Développement de plateformes permettant aux citoyens de participer activement aux processus démocratiques."
+      },
+      {
+        "title": "Innovation Civique",
+        "description": "Création d'outils numériques adaptés aux défis spécifiques de la gouvernance en Afrique."
+      },
+      {
+        "title": "Réseau Panafricain",
+        "description": "Construction d'un réseau de plus de 400 activistes et innovateurs dans 45 pays africains depuis 2015."
+      }
+    ]
   },
   "conference": {
-    "title": "West Africa CivicTech Conference 2025",
+    "title": "Conférence CivicTech d'Afrique de l'Ouest 2025",
     "description": "Rejoignez-nous à Lagos, Nigeria, du 19 au 21 mai 2025 pour la plus grande conférence sur l'innovation civique et la technologie démocratique en Afrique de l'Ouest.",
     "date": "Date",
     "location": "Lieu",
-    "register": "S'inscrire à la conférence"
+    "register": "S'inscrire à la conférence",
+    "features": [
+      {
+        "title": "Networking",
+        "description": "Rencontrez des innovateurs et activistes civic tech de toute l'Afrique de l'Ouest."
+      },
+      {
+        "title": "Hack4Democracy",
+        "description": "Participez au hackathon pour développer des solutions numériques pour la démocratie."
+      },
+      {
+        "title": "Ateliers",
+        "description": "Assistez à des ateliers sur les dernières tendances en matière d'innovation civique et de droits numériques."
+      },
+      {
+        "title": "Exposition",
+        "description": "Découvrez les projets innovants d'AfricTivistes et de ses partenaires pour une Afrique plus démocratique."
+      }
+    ]
   },
   "partnership": {
     "title": "Annonce de Partenariat",

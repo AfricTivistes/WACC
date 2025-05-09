@@ -6,12 +6,17 @@ interface ImpactSectionProps {
     impact: {
       title: string
       description: string
+      items: Array<{
+        title: string
+        description: string
+      }>
     }
   }
 }
 
 export default function ImpactSection({ dict }: ImpactSectionProps) {
-  const impacts = [
+  // Utiliser les impacts du dictionnaire
+  const impacts = dict.impact.items || [
     {
       title: "Éducation Civique",
       description: "Plus de 2000 apprenants formés via notre MOOC sur la démocratie, les élections et la gouvernance.",

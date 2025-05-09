@@ -15,6 +15,10 @@ interface ConferenceSectionProps {
       date: string
       location: string
       register: string
+      features: Array<{
+        title: string
+        description: string
+      }>
     }
     partnership: {
       title: string
@@ -26,7 +30,8 @@ interface ConferenceSectionProps {
 }
 
 export default function ConferenceSection({ dict, lang }: ConferenceSectionProps) {
-  const features = [
+  // Utiliser les fonctionnalités du dictionnaire
+  const features = dict.conference.features || [
     {
       icon: <Users className="h-6 w-6 text-primary" />,
       title: "Networking",
@@ -50,6 +55,16 @@ export default function ConferenceSection({ dict, lang }: ConferenceSectionProps
         "Découvrez les projets innovants d'AfricTivistes et de ses partenaires pour une Afrique plus démocratique.",
     },
   ]
+
+  // Mapping des icônes pour les fonctionnalités
+  const featureIcons = {
+    Networking: <Users className="h-6 w-6 text-primary" />,
+    Hack4Democracy: <Award className="h-6 w-6 text-primary" />,
+    Ateliers: <Calendar className="h-6 w-6 text-primary" />,
+    Workshops: <Calendar className="h-6 w-6 text-primary" />,
+    Exposition: <MapPin className="h-6 w-6 text-primary" />,
+    Exhibition: <MapPin className="h-6 w-6 text-primary" />,
+  }
 
   return (
     <>
@@ -92,7 +107,11 @@ export default function ConferenceSection({ dict, lang }: ConferenceSectionProps
                       delay={100 * index + 500}
                       className="flex items-start"
                     >
-                      <div className="mr-3 mt-1">{feature.icon}</div>
+                      <div className="mr-3 mt-1">
+                        {featureIcons[feature.title as keyof typeof featureIcons] || (
+                          <Users className="h-6 w-6 text-primary" />
+                        )}
+                      </div>
                       <div>
                         <h4 className="font-semibold">{feature.title}</h4>
                         <p className="text-sm text-gray-600 dark:text-gray-400">{feature.description}</p>

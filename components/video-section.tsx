@@ -6,7 +6,11 @@ import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { AnimatedElement } from "@/components/ui/animated-element"
 
-export default function VideoSection() {
+interface VideoSectionProps {
+  dict: any
+}
+
+export default function VideoSection({ dict }: VideoSectionProps) {
   const [isPlaying, setIsPlaying] = useState(false)
   const [isMuted, setIsMuted] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -33,11 +37,8 @@ export default function VideoSection() {
     <section className="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
       <div className="container">
         <AnimatedElement animation="fade-up" className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">Découvrez Nos Initiatives</h2>
-          <p className="text-gray-600 dark:text-gray-400">
-            Plongez dans l&apos;univers d&apos;Africtivistes à travers cette compilation vidéo de nos différentes
-            initiatives et activités à travers l&apos;Afrique.
-          </p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">{dict.video.title}</h2>
+          <p className="text-gray-600 dark:text-gray-400">{dict.video.description}</p>
         </AnimatedElement>
 
         <AnimatedElement animation="fade-in" delay={300} className="relative max-w-4xl mx-auto">
@@ -95,13 +96,8 @@ export default function VideoSection() {
         </AnimatedElement>
 
         <AnimatedElement animation="fade-up" delay={600} className="mt-12 text-center">
-          <p className="text-lg font-medium gradient-text">
-            Ensemble, transformons la gouvernance en Afrique par la technologie
-          </p>
-          <p className="mt-2 text-gray-600 dark:text-gray-400">
-            Cette vidéo présente nos projets phares : MOOC Démocratie, Soobu.tech, Farafina.tech, Citizen Lab, Charter
-            Project Africa et Taxaw Temm.
-          </p>
+          <p className="text-lg font-medium gradient-text">{dict.video.tagline}</p>
+          <p className="mt-2 text-gray-600 dark:text-gray-400">{dict.video.projects}</p>
         </AnimatedElement>
       </div>
     </section>

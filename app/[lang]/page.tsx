@@ -10,25 +10,47 @@ import ConferenceSection from "@/components/conference-section"
 import ContactSection from "@/components/contact-section"
 import Footer from "@/components/footer"
 
-export default async function Home({
-  params: { lang },
-}: {
-  params: { lang: Locale }
+// Fonction pour générer les métadonnées dynamiquement
+export async function generateMetadata({ 
+  params 
+}: { 
+  params: { lang: string } 
 }) {
-  // Récupérer le dictionnaire pour la langue actuelle
-  const dict = await getDictionary(lang)
+  return {
+    title: "AfricTivistes | Transformer la gouvernance par la technologie",
+    description:
+      "AfricTivistes est un réseau panafricain qui promeut une Afrique démocratique, inclusive et souveraine à l'ère du numérique.",
+  }
+}
+
+// Fonction pour générer les paramètres statiques
+export async function generateStaticParams() {
+  return [
+    { lang: "fr" },
+    { lang: "en" }
+  ]
+}
+
+export default async function Home({
+  params,
+}: {
+  params: { lang: string }
+}) {
+  // Convertir le paramètre en Locale et récupérer le dictionnaire
+  const locale = (params?.lang || "fr") as Locale
+  const dict = await getDictionary(locale)
 
   return (
     <main className="min-h-screen flex flex-col">
-      <Navbar lang={lang} dict={dict} />
-      <HeroSection dict={dict} lang={lang} />
+      <Navbar lang={locale} dict={dict} />
+      <HeroSection dict={dict} lang={locale} />
       <AboutSection dict={dict} />
       <VideoSection dict={dict} />
       <ProjectsSection dict={dict} />
       <ImpactSection dict={dict} />
-      <ConferenceSection dict={dict} lang={lang} />
+      <ConferenceSection dict={dict} lang={locale} />
       <ContactSection dict={dict} />
-      <Footer dict={dict} lang={lang} />
+      <Footer dict={dict} lang={locale} />
     </main>
   )
 }

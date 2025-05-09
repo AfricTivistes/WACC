@@ -9,7 +9,30 @@ import { Textarea } from "@/components/ui/textarea"
 import { Mail, Phone, MapPin, Send } from "lucide-react"
 import { AnimatedElement } from "@/components/ui/animated-element"
 
-export default function ContactSection() {
+interface ContactSectionProps {
+  dict: {
+    contact: {
+      title: string
+      description: string
+      form: {
+        name: string
+        email: string
+        subject: string
+        message: string
+        send: string
+      }
+      address: string
+      phone: string
+      join: {
+        title: string
+        description: string
+        cta: string
+      }
+    }
+  }
+}
+
+export default function ContactSection({ dict }: ContactSectionProps) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -36,28 +59,26 @@ export default function ContactSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800"></div>
       <div className="container relative z-10">
         <AnimatedElement animation="fade-up" className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">Contactez-nous</h2>
-          <p className="text-gray-600 dark:text-gray-400">
-            Vous avez des questions ou souhaitez collaborer avec nous ? N'hésitez pas à nous contacter.
-          </p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">{dict.contact.title}</h2>
+          <p className="text-gray-600 dark:text-gray-400">{dict.contact.description}</p>
         </AnimatedElement>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <AnimatedElement animation="fade-in" delay={300}>
             <div className="glass dark:glass-dark rounded-lg p-8 shadow-md card-hover">
-              <h3 className="text-2xl font-bold mb-6">Envoyez-nous un message</h3>
+              <h3 className="text-2xl font-bold mb-6">{dict.contact.form.send}</h3>
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-1">
-                    Nom complet
+                    {dict.contact.form.name}
                   </label>
                   <Input
                     id="name"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="Votre nom"
+                    placeholder={dict.contact.form.name}
                     required
                     className="transition-all duration-300 focus:border-primary focus:ring-primary"
                   />
@@ -65,7 +86,7 @@ export default function ContactSection() {
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium mb-1">
-                    Email
+                    {dict.contact.form.email}
                   </label>
                   <Input
                     id="email"
@@ -81,14 +102,14 @@ export default function ContactSection() {
 
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium mb-1">
-                    Sujet
+                    {dict.contact.form.subject}
                   </label>
                   <Input
                     id="subject"
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    placeholder="Sujet de votre message"
+                    placeholder={dict.contact.form.subject}
                     required
                     className="transition-all duration-300 focus:border-primary focus:ring-primary"
                   />
@@ -96,14 +117,14 @@ export default function ContactSection() {
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium mb-1">
-                    Message
+                    {dict.contact.form.message}
                   </label>
                   <Textarea
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Votre message"
+                    placeholder={dict.contact.form.message}
                     rows={5}
                     required
                     className="transition-all duration-300 focus:border-primary focus:ring-primary"
@@ -111,7 +132,7 @@ export default function ContactSection() {
                 </div>
 
                 <Button type="submit" className="w-full btn-hover-effect">
-                  Envoyer le message
+                  {dict.contact.form.send}
                   <Send className="ml-2 h-4 w-4" />
                 </Button>
               </form>
@@ -129,7 +150,7 @@ export default function ContactSection() {
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold">Adresse</h3>
+                  <h3 className="text-lg font-semibold">{dict.contact.address}</h3>
                   <p className="text-gray-600 dark:text-gray-400">Dakar, Sénégal</p>
                 </div>
               </div>
@@ -166,7 +187,7 @@ export default function ContactSection() {
                   <Phone className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold">Téléphone</h3>
+                  <h3 className="text-lg font-semibold">{dict.contact.phone}</h3>
                   <a
                     href="tel:+221338673080"
                     className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors hover-underline"
@@ -182,13 +203,10 @@ export default function ContactSection() {
               delay={700}
               className="bg-primary text-white rounded-lg p-6 shadow-md card-hover"
             >
-              <h3 className="text-xl font-bold mb-4">Rejoignez notre réseau</h3>
-              <p className="mb-4">
-                Devenez membre d'Africtivistes et participez à la transformation de la gouvernance en Afrique par la
-                technologie.
-              </p>
+              <h3 className="text-xl font-bold mb-4">{dict.contact.join.title}</h3>
+              <p className="mb-4">{dict.contact.join.description}</p>
               <Button variant="secondary" className="btn-hover-effect">
-                Devenir membre
+                {dict.contact.join.cta}
               </Button>
             </AnimatedElement>
           </div>

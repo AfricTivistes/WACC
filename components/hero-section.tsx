@@ -28,13 +28,15 @@ export default function HeroSection({ dict, lang }: HeroSectionProps) {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               {lang === "fr" ? (
                 <>
-                  {dict.hero.title.split("technologie")[0]}
-                  <span className="gradient-text">technologie</span>
+                  {dict.hero.title.split("CivicTech")[0]}
+                  <span className="gradient-text">CivicTech</span>
+                  {dict.hero.title.split("CivicTech")[1]}
                 </>
               ) : (
                 <>
-                  {dict.hero.title.split("technology")[0]}
-                  <span className="gradient-text">technology</span>
+                  {dict.hero.title.split("CivicTech")[0]}
+                  <span className="gradient-text">CivicTech</span>
+                  {dict.hero.title.split("CivicTech")[1]}
                 </>
               )}
             </h1>
