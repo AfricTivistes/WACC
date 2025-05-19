@@ -43,38 +43,13 @@ export default function VideoSection({ dict }: VideoSectionProps) {
 
         <AnimatedElement animation="fade-in" delay={300} className="relative max-w-4xl mx-auto">
           <div className="relative rounded-xl overflow-hidden shadow-2xl bg-black aspect-video card-hover">
-            <video
-              ref={videoRef}
-              className="w-full h-full object-cover"
-              poster="/placeholder.svg?key=uflna"
-              onEnded={() => setIsPlaying(false)}
-            >
-              {/* Remplacez cette source par votre vidéo réelle */}
-              <source
-                src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-                type="video/mp4"
-              />
-              Votre navigateur ne prend pas en charge la lecture de vidéos.
-            </video>
-
-            <div
-              className={cn(
-                "absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity duration-500",
-                isPlaying ? "opacity-0 pointer-events-none" : "opacity-100 glass dark:glass-dark bg-opacity-30",
-              )}
-              onClick={togglePlay}
-            >
-              <Button
-                size="lg"
-                className="rounded-full w-16 h-16 flex items-center justify-center bg-primary/90 hover:bg-primary text-white transition-transform duration-300 hover:scale-110"
-                onClick={(e) => {
-                  e.stopPropagation()
-                  togglePlay()
-                }}
-              >
-                <Play className="h-8 w-8 fill-current" />
-              </Button>
-            </div>
+          <iframe
+            className="w-full h-full"
+            src="https://www.youtube.com/embed/u3U9R9Bwp14?si=kXfRvxPyIhVIQHmf&rel=0&autoplay=0&mute=0&controls=1"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
 
             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
               <div className="flex items-center justify-between">
