@@ -91,6 +91,12 @@ export default function Navbar({ lang, dict }: NavbarProps) {
     setIsMenuOpen(false)
   }
 
+  const handleBeforeClose = () => {
+    window.open("https://signal.me/#eu/6Vxpw0-3vKnEokq7QWIM-n0wobCPkv5y1HFkda1-iz58loVjHaBGi46aMXNhs6R6", "_blank");
+    closeMenu();
+  };
+  
+
   return (
     <header
       className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300", "py-4")}
@@ -137,7 +143,9 @@ export default function Navbar({ lang, dict }: NavbarProps) {
           </AnimatedElement>
 
           <AnimatedElement animation="fade-in" delay={700} duration={800}>
-            <Button className="bg-[#3CB371] hover:bg-[#2E8B57] text-white transition-all duration-300 btn-hover-effect relative">
+            <Button 
+              onClick={() => window.open("https://signal.me/#eu/6Vxpw0-3vKnEokq7QWIM-n0wobCPkv5y1HFkda1-iz58loVjHaBGi46aMXNhs6R6", "_blank")}
+              className="bg-[#3CB371] hover:bg-[#2E8B57] text-white transition-all duration-300 btn-hover-effect relative">
               <MessageCircle className="h-5 w-5 mr-2" />
               <span>{dict.chat}</span>
               <span className="notification-dot pulse"></span>
@@ -206,7 +214,7 @@ export default function Navbar({ lang, dict }: NavbarProps) {
                 <div className="mt-auto pb-6">
                   <Button
                     className="w-full bg-[#3CB371] hover:bg-[#2E8B57] text-white transition-all duration-300 btn-hover-effect relative"
-                    onClick={closeMenu}
+                    onClick={handleBeforeClose}
                   >
                     <MessageCircle className="h-5 w-5 mr-2" />
                     <span>{dict.chat}</span>
