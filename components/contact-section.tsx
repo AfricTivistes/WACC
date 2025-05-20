@@ -43,16 +43,27 @@ export default function ContactSection({ dict }: ContactSectionProps) {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+  }  
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Ici, vous pourriez ajouter la logique pour envoyer le formulaire
-    console.log("Form submitted:", formData)
-    // Réinitialiser le formulaire
-    setFormData({ name: "", email: "", subject: "", message: "" })
-    alert("Merci pour votre message ! Nous vous contacterons bientôt.")
-  }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    const form = e.target;
+    const formData = new FormData(form);
+  
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      });
+  
+      alert("Merci pour votre message !");
+      form.reset(); // ou reset les états si tu utilises useState
+    } catch (error) {
+      alert("Une erreur est survenue.");
+    }
+  };  
 
   return (
     <section id="contact" className="py-16 md:py-24 relative overflow-hidden">
@@ -68,7 +79,9 @@ export default function ContactSection({ dict }: ContactSectionProps) {
             <div className="glass dark:glass-dark rounded-lg p-8 shadow-md card-hover">
               <h3 className="text-2xl font-bold mb-6">{dict.contact.form.send}</h3>
 
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onSubmit={handleSubmit} className="space-y-4">
+              <input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" name="bot-field" />
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-1">
                     {dict.contact.form.name}
